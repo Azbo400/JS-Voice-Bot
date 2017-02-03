@@ -1,16 +1,10 @@
 //Javascript linked with index.html!
-'use-strict';
+
 
 responsiveVoice.setDefaultVoice("US English Female");
 
 function weather(){
-  fetch('https://ipinfo.io')
-    .then(function(blob){
-      return blob.json();
-    })
-    .then(function(data){
-      console.log(data);
-    });
+  console.log("works!")
 }
 
 
@@ -20,11 +14,9 @@ if (annyang) {
     'hi': function() {
       responsiveVoice.speak("Hi there, may I assist you");
     },
-    'What can you do': function() {
-      responsiveVoice.speak("Here is a list of things I can respond too");
-    },
-    'What is the weather like': weather(),
+    '(What is the) weather (like)': weather
   };
+}
 
   // Add our commands to annyang
   annyang.addCommands(commands);
