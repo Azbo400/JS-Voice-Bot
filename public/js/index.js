@@ -4,7 +4,7 @@
 responsiveVoice.setDefaultVoice("US English Female");
 
 function weather(){
-  console.log("works!")
+  console.log("works");
 }
 
 
@@ -13,8 +13,7 @@ if (annyang) {
   var commands = {
     'hi': function() {
       responsiveVoice.speak("Hi there, may I assist you");
-    },
-    '(What is the) weather (like)': weather
+    }
   };
 }
 
