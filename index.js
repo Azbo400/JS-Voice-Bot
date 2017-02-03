@@ -9,10 +9,10 @@ if (annyang) {
   var commands = {
     'hi': function() {
       responsiveVoice.speak("Hi there, may I assist you");
-    }
+    },
     'What can you do':function(){
       responsiveVoice.speak("Here is a list of things I can respond too");
-    }
+    },
     'What is the weather like':function(){
       fetch('https://ipinfo.io')
         .then(function(blob){
@@ -21,7 +21,7 @@ if (annyang) {
         .then(function(data){
           console.log(data);
         });
-
+        
     }
   };
 
