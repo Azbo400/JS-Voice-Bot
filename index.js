@@ -12,7 +12,7 @@ if (annyang) {
       responsiveVoice.speak("Hi there, may I assist you");
     }
   };
-}
+
 
   // Add our commands to annyang
   annyang.addCommands(commands);
