@@ -3,6 +3,16 @@
 
 responsiveVoice.setDefaultVoice("US English Female");
 
+function weather(){
+  fetch('https://ipinfo.io')
+    .then(function(blob){
+      return blob.json();
+    })
+    .then(function(data){
+      console.log(data);
+    });
+}
+
 
 if (annyang) {
   //Commands
@@ -10,19 +20,10 @@ if (annyang) {
     'hi': function() {
       responsiveVoice.speak("Hi there, may I assist you");
     },
-    'What can you do':function(){
+    'What can you do': function() {
       responsiveVoice.speak("Here is a list of things I can respond too");
     },
-    'What is the weather like':function(){
-      fetch('https://ipinfo.io')
-        .then(function(blob){
-          return blob.json();
-        })
-        .then(function(data){
-          console.log(data);
-        });
-        
-    }
+    'What is the weather like': weather(),
   };
 
   // Add our commands to annyang
