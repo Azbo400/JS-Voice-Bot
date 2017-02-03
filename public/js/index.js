@@ -1,6 +1,3 @@
-//Javascript linked with index.html!
-
-
 responsiveVoice.setDefaultVoice("US English Female");
 
 function weather(){
